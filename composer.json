@@ -59,7 +59,10 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "App\\Modules\\User\\": "src/modules/user/src/",
+            "App\\Modules\\Restaurant\\": "src/modules/restaurant/src/",
+            "App\\Modules\\Shared\\": "src/modules/shared/src/"
         }
     },
     "autoload-dev": {

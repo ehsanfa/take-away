@@ -3,7 +3,9 @@
 namespace App\Modules\User\Application\Controller;
 
 use App\Modules\Shared\Application\CommandBus;
+use App\Modules\Shared\Application\CommandBusInterface;
 use App\Modules\User\Application\Create\UserCreatorCommand;
+use App\Modules\User\Application\Create\UserCreatorCommandHandler;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

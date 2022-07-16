@@ -3,6 +3,9 @@ services:
     autowire: true
     autoconfigure: true
 
+  App\Modules\User\:
+    resource: '../src'
+
   App\Modules\Shared\Domain\Entity\DoctrineDatabaseAdapter: ~
 
   App\Modules\Shared\Domain\Entity\DatabaseAdapterInterface: '@App\Modules\Shared\Domain\Entity\DoctrineDatabaseAdapter'
