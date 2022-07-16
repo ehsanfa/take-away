@@ -1,3 +1,7 @@
-controllers:
-    resource: ../src/Controller/
+users:
+    resource: ../src/Modules/User/Application/Controller/
+    type: attribute
+
+restaurants:
+    resource: ../src/Modules/Restaurant/Application/Controller/
     type: attribute
