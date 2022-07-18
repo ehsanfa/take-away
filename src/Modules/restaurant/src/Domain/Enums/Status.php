@@ -2,8 +2,8 @@
 
 namespace App\Modules\Restaurant\Domain\Enums;
 
-enum Status: string
+enum Status: int
 {
-    case Active = 'active';
-    case Deactivated = 'deactivated';
+    case Active = 1;
+    case Deactivated = 2;
 }

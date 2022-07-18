@@ -2,9 +2,9 @@
 
 namespace App\Modules\Shared\Domain\ValueObjects;
 
-class GeoLocation implements \Stringable
+abstract class GeoLocation implements \Stringable
 {
-    public function __construct(private float $latitude, private float $longitude)
+    public function __construct(protected float $latitude, protected float $longitude)
     {}
 
     public function getLongitude(): float

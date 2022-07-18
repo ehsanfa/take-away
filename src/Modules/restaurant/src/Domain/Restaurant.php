@@ -8,9 +8,11 @@ use App\Modules\Restaurant\Domain\ValueObjects\Name;
 use App\Modules\Restaurant\Domain\ValueObjects\Status;
 use App\Modules\Shared\Domain\Entity;
 use App\Modules\Shared\Domain\RestaurantId;
+use App\Modules\Shared\Domain\UserId;
 
 class Restaurant extends Entity
 {
+    private UserId $userId;
     private Location $location;
     private Name $name;
     private Status $status;
@@ -33,6 +35,17 @@ class Restaurant extends Entity
     public function getId(): RestaurantId
     {
         return $this->id;
+    }
+
+    public function getUserId(): UserId
+    {
+        return $this->userId;
+    }
+
+    public function setUserId(UserId $userId): self
+    {
+        $this->userId = $userId;
+        return $this;
     }
 
     public function getLocation(): Location
@@ -67,4 +80,21 @@ class Restaurant extends Entity
         $this->status = $status;
         return $this;
     }
+
+    public static function create(
+        RestaurantId $restaurantId,
+        UserId $userId,
+        Name $name,
+        Location $location,
+        Status $status
+    ) {
+        $restaurant = new self($restaurantId);
+        $restaurant->setUserId($userId);
+        $restaurant->setName($name);
+        $restaurant->setLocation($location);
+        $restaurant->setStatus($status);
+        return $restaurant;
+    }
+
+
 }

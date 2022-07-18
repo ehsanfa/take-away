@@ -1,0 +1,13 @@
+doctrine:
+    dbal:
+        types:
+            restaurant_status: 'App\Modules\Restaurant\Infrastructure\Doctrine\RestaurantStatusType'
+
+    orm:
+        mappings:
+            App\Modules\Restaurant\Domain:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/modules/restaurant/src/Infrastructure/Doctrine'
+                prefix: 'App\Modules\Restaurant\Domain'
+                alias: Restaurant

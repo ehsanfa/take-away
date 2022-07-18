@@ -2,27 +2,27 @@
 
 namespace App\Modules\Restaurant\Application\Create;
 
+use App\Modules\Restaurant\Domain\Enums\Status;
 use App\Modules\Restaurant\Domain\ValueObjects\Location;
 use App\Modules\Restaurant\Domain\ValueObjects\Name;
-use App\Modules\Restaurant\Domain\ValueObjects\Status;
 use App\Modules\Shared\Application\Command;
 use App\Modules\Shared\Domain\UserId;
 
 class CreateRestaurantCommand extends Command
 {
     public function __construct(
-        private readonly UserId $userId,
-        private readonly Name   $name,
+        private readonly int $userId,
+        private readonly string   $name,
         private readonly Location $location,
         private readonly Status $status
     ) {}
 
-    public function getUserId(): UserId
+    public function getUserId(): int
     {
         return $this->userId;
     }
 
-    public function getName(): Name
+    public function getName(): string
     {
         return $this->name;
     }

@@ -19,6 +19,16 @@ class Location implements \Stringable
         return $this->address;
     }
 
+    public function getLatitude(): float
+    {
+        return $this->geoLocation->getLatitude();
+    }
+
+    public function getLongitude(): float
+    {
+        return $this->getGeoLocation()->getLongitude();
+    }
+
     public function __toString(): string
     {
         return "address: " . $this->getAddress() . ", geolocation: " . $this->getGeoLocation();

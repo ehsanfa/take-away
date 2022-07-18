@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Modules\User\Infrastructure;
+namespace App\Modules\Shared\Infrastructure;
 
 use App\Modules\Shared\Domain\Entity;
 use Doctrine\Persistence\ManagerRegistry;
 
-class DoctrineDatabaseAdapter implements DatabaseAdapterInterface
+class DoctrineDatabaseAdapter implements SavableEntityDatabaseAdapterInterface
 {
     public function __construct(private ManagerRegistry $doctrine)
     {}
@@ -16,4 +16,5 @@ class DoctrineDatabaseAdapter implements DatabaseAdapterInterface
         $entityManager->persist($entity);
         $entityManager->flush();
     }
+
 }

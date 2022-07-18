@@ -2,16 +2,8 @@
 
 namespace App\Modules\User\Persistence;
 
-use App\Modules\User\Domain\User;
-use App\Modules\User\Infrastructure\DatabaseAdapterInterface;
+use App\Modules\Shared\Persistence\BaseRepository;
 
-class UserRepository
+class UserRepository extends BaseRepository
 {
-    public function __construct(private DatabaseAdapterInterface $databaseAdapter)
-    {}
-
-    public function save(User $user)
-    {
-        $this->databaseAdapter->save($user);
-    }
 }

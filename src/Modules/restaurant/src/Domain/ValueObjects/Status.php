@@ -15,6 +15,15 @@ class Status implements \Stringable
         return $this->value;
     }
 
+    public static function getValues() :array
+    {
+        $values = [];
+        foreach (StatusEnum::cases() as $status) {
+            $values[] = $status->value;
+        }
+        return $values;
+    }
+
     public function __toString(): string
     {
         return $this->getValue()->value;

@@ -1,0 +1,9 @@
+doctrine:
+    orm:
+        mappings:
+            App\Modules\User\Domain:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/modules/user/src/Infrastructure/Doctrine'
+                prefix: 'App\Modules\User\Domain'
+                alias: User

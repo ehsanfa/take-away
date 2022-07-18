@@ -1,0 +1,7 @@
+#users:
+#    resource: ../src/modules/user/src/Application/Controller/
+#    type: attribute
+#
+#restaurants:
+#    resource: ../src/modules/restaurant/src/Application/Controller/
+#    type: attribute

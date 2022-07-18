@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: false
+    autoconfigure: false
+
+  App\Modules\Shared\Application\CommandBus:
+    class: App\Modules\Shared\Application\CommandBus
+    arguments:
+      - App\Modules\Restaurant\Application\Create\CreateRestaurantCommand: '@App\Modules\Restaurant\Application\Create\CreateRestaurantCommandHandler'
+
