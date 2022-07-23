@@ -1,0 +1,9 @@
+doctrine:
+    orm:
+        mappings:
+            App\Modules\Item\Domain:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/modules/item/src/Infrastructure/Doctrine'
+                prefix: 'App\Modules\Item\Domain'
+                alias: Item

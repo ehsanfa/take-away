@@ -7,6 +7,7 @@ use App\Modules\Restaurant\Domain\Enums\Status;
 use App\Modules\Restaurant\Domain\ValueObjects\Location;
 use App\Modules\Shared\Application\CommandBus;
 use App\Modules\Restaurant\Domain\ValueObjects\GeoLocation;
+use Ramsey\Uuid\Uuid;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,10 +21,10 @@ class RestaurantController extends AbstractController
      */
     public function create(Request $request, CommandBus $bus): Response
     {
-        $geoLocation = new GeoLocation(34.43, 56.3434);
+        $geoLocation = new GeoLocation(37.43, 56.3434);
         $location = new Location($geoLocation, "test address");
         $bus->handle(
-            new CreateRestaurantCommand(12, "hasan", $location, Status::Active)
+            new CreateRestaurantCommand(Uuid::uuid4(), "hasan", $location, Status::Active)
         );
         return new JsonResponse([
             "result" => "okay"

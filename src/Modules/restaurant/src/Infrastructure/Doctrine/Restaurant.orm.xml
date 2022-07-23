@@ -10,6 +10,7 @@
         <embedded name="name" class="App\Modules\Restaurant\Domain\ValueObjects\Name" use-column-prefix="false" />
         <embedded name="location" class="App\Modules\Restaurant\Domain\ValueObjects\Location" use-column-prefix="false" />
         <embedded name="status" class="App\Modules\Restaurant\Domain\ValueObjects\Status" use-column-prefix="false" />
+        <embedded name="userId" class="App\Modules\Restaurant\Domain\ValueObjects\UserId" use-column-prefix="false" />
     </entity>
 
 </doctrine-mapping>

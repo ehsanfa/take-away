@@ -1,0 +1,14 @@
+imports:
+  - { resource: './command_bus.yaml' }
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\Modules\Item\:
+    resource: '../src'
+
+  App\Modules\Shared\Infrastructure\DoctrineDatabaseAdapter: ~
+
+  App\Modules\Shared\Infrastructure\DatabaseAdapterInterface: '@App\Modules\Shared\Infrastructure\DoctrineDatabaseAdapter'

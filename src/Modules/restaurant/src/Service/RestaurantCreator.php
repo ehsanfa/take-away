@@ -6,9 +6,9 @@ use App\Modules\Restaurant\Domain\Restaurant;
 use App\Modules\Restaurant\Domain\ValueObjects\Location;
 use App\Modules\Restaurant\Domain\ValueObjects\Name;
 use App\Modules\Restaurant\Domain\ValueObjects\Status;
+use App\Modules\Restaurant\Domain\ValueObjects\UserId;
 use App\Modules\Restaurant\Persistence\RestaurantRepository;
 use App\Modules\Shared\Domain\RestaurantId;
-use App\Modules\Shared\Domain\UserId;
 use Ramsey\Uuid\Uuid;
 
 class RestaurantCreator

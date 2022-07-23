@@ -1,0 +1,13 @@
+doctrine:
+    dbal:
+        types:
+            inventory_status: 'App\Modules\Inventory\Infrastructure\Doctrine\InventoryStatusType'
+
+    orm:
+        mappings:
+            App\Modules\Inventory\Domain:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/modules/inventory/src/Infrastructure/Doctrine'
+                prefix: 'App\Modules\Inventory\Domain'
+                alias: Inventory

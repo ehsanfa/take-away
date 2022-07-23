@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/modules/shared/src" isTestSource="false" packagePrefix="App\Modules\Shared\" />
       <sourceFolder url="file://$MODULE_DIR$/src/modules/user/src" isTestSource="false" packagePrefix="App\Modules\User\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/modules/inventory/src" isTestSource="false" packagePrefix="App\Modules\Inventory\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/modules/item/src" isTestSource="false" packagePrefix="App\Modules\Item\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/notifier" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />

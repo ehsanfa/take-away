@@ -62,7 +62,9 @@
             "App\\": "src/",
             "App\\Modules\\User\\": "src/modules/user/src/",
             "App\\Modules\\Restaurant\\": "src/modules/restaurant/src/",
-            "App\\Modules\\Shared\\": "src/modules/shared/src/"
+            "App\\Modules\\Shared\\": "src/modules/shared/src/",
+            "App\\Modules\\Item\\": "src/modules/item/src/",
+            "App\\Modules\\Inventory\\": "src/modules/inventory/src/"
         }
     },
     "autoload-dev": {

@@ -4,9 +4,9 @@ namespace App\Modules\Restaurant\Application\Create;
 
 use App\Modules\Restaurant\Domain\ValueObjects\Name;
 use App\Modules\Restaurant\Domain\ValueObjects\Status;
+use App\Modules\Restaurant\Domain\ValueObjects\UserId;
 use App\Modules\Restaurant\Service\RestaurantCreator;
 use App\Modules\Shared\Application\Command;
-use App\Modules\Shared\Domain\UserId;
 
 class CreateRestaurantCommandHandler
 {

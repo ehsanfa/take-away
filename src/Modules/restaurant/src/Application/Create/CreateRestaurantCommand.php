@@ -11,13 +11,13 @@ use App\Modules\Shared\Domain\UserId;
 class CreateRestaurantCommand extends Command
 {
     public function __construct(
-        private readonly int $userId,
+        private readonly string $userId,
         private readonly string   $name,
         private readonly Location $location,
         private readonly Status $status
     ) {}
 
-    public function getUserId(): int
+    public function getUserId(): string
     {
         return $this->userId;
     }

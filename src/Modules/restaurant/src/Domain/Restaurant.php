@@ -6,9 +6,9 @@ use App\Modules\Restaurant\Domain\Enums\Status as StatusEnum;
 use App\Modules\Restaurant\Domain\ValueObjects\Location;
 use App\Modules\Restaurant\Domain\ValueObjects\Name;
 use App\Modules\Restaurant\Domain\ValueObjects\Status;
+use App\Modules\Restaurant\Domain\ValueObjects\UserId;
 use App\Modules\Shared\Domain\Entity;
 use App\Modules\Shared\Domain\RestaurantId;
-use App\Modules\Shared\Domain\UserId;
 
 class Restaurant extends Entity
 {
@@ -17,7 +17,7 @@ class Restaurant extends Entity
     private Name $name;
     private Status $status;
 
-    public function __construct(private readonly RestaurantId $id)
+    private function __construct(private readonly RestaurantId $id)
     {
         $this->status = new Status(StatusEnum::Deactivated);
     }
@@ -29,6 +29,7 @@ class Restaurant extends Entity
             'location' => (array) $this->getLocation(),
             'name' => (string) $this->getName(),
             'status' => (string) $this->getStatus(),
+            'userId' => (string) $this->getUserId(),
         ];
     }
 

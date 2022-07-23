@@ -13,7 +13,7 @@ final class User extends Entity
     private FirstName $firstName;
     private LastName $lastName;
 
-    public function __construct(
+    private function __construct(
         private readonly UserId $id,
         private Email $email
     ) {}
